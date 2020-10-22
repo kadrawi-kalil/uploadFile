@@ -59,7 +59,7 @@ app.post('/upload', (req, res) => {
           msg: 'Error: No File Selected!'
         });
       } else {
-        res.render('index', {
+        res.send( {
           msg: 'File Uploaded!',
           file: `uploads/${req.file.filename}`
         });
