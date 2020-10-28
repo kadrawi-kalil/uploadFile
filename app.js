@@ -47,6 +47,9 @@ app.use(express.static('./public'));
 
 app.get('/', (req, res) => res.render('index'));
 
+
+app.use('/uploads', express.static(__dirname+ '/uploads'))
+
 app.post('/upload', (req, res) => {
   upload(req, res, (err) => {
     if(err){
